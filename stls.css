@@ -67,9 +67,10 @@ img {
     transition: transform 0.3s ease;
 }
 
-.img_cont{
+.imgs_cont{
     display:flex;
     flex-wrap:wrap;
+    justify-content:space-around;
 }
 
 img:hover {
