@@ -68,16 +68,18 @@ nav a:hover {
 }
 
 .imgs_cont img {
-    width: calc(50% - 10px); /* 50% ширины контейнера с отступом */
-    height: auto; /* Автоматическая высота */
-    margin-bottom: 20px; /* Отступ снизу для изображений */
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    width: calc(50% - 10px); 
+    height: 200px; 
+    object-fit: cover; 
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
 }
 
 .imgs_cont img:hover {
     transform: scale(1.05); /* Увеличение при наведении */
 }
+
 
 /* Стили для кнопок */
 button {
