@@ -67,6 +67,11 @@ img {
     transition: transform 0.3s ease;
 }
 
+.img_cont{
+    display:flex;
+    flex-wrap:wrap;
+}
+
 img:hover {
     transform: scale(1.05);
 }
