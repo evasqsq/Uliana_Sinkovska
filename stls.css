@@ -60,21 +60,23 @@ nav a:hover {
 }
 
 /* Стили для изображений */
-img {
-    max-width: 100%;
-    height: auto;
+.imgs_cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Разделение между изображениями */
+    margin: 20px 0;
+}
+
+.imgs_cont img {
+    width: calc(50% - 10px); /* 50% ширины контейнера с отступом */
+    height: auto; /* Автоматическая высота */
+    margin-bottom: 20px; /* Отступ снизу для изображений */
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
-.imgs_cont{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-}
-
-img:hover {
-    transform: scale(1.05);
+.imgs_cont img:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
 }
 
 /* Стили для кнопок */
