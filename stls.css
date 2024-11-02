@@ -1,9 +1,9 @@
 /* Общие стили */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Светлый фон */
+    background-color: #f0f4f8; /* Светлый фон для страницы */
     color: #333;
     line-height: 1.6;
 }
@@ -12,32 +12,44 @@ body {
 h1, h2, h3 {
     text-align: center;
     margin: 20px 0;
-    color: #4b0082; /* Темно-фиолетовый цвет */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #2e7d32; /* Темно-зеленый цвет */
 }
 
 /* Стили для навигационного меню */
 nav {
-    background: #4b0082; /* Темно-фиолетовый */
+    background: #4caf50; /* Темный зеленый цвет */
     padding: 15px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.5s ease-in-out; /* Анимация для навигации */
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
     margin: 0 20px;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffcc00; /* Светло-желтый при наведении */
-    transform: scale(1.1); /* Увеличение при наведении */
+    background: #388e3c; /* Более темный зеленый при наведении */
+}
+
+/* Анимация появления элементов */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Стили для блоков контента */
@@ -45,10 +57,10 @@ nav a:hover {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background: #ffffff; /* Белый фон */
+    background: #ffffff; /* Белый фон для контента */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out; /* Анимация для контейнера */
 }
 
 /* Анимация появления */
@@ -63,20 +75,62 @@ nav a:hover {
     }
 }
 
+/* Стили для резюме */
+.resume-section {
+    margin: 40px 0;
+    padding: 20px;
+    background: #e8f5e9; /* Светло-зеленый фон для резюме */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out; /* Анимация для резюме */
+}
+
+.resume-section h2 {
+    color: #2e7d32; /* Темно-зеленый для заголовка резюме */
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Увеличенный размер шрифта */
+    text-align: left; /* Выравнивание влево */
+}
+
+.resume-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid #4caf50; /* Левый бордер для акцента */
+    background: #f1f8e9; /* Очень светлый зеленый фон */
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Анимация трансформации */
+}
+
+.resume-item:hover {
+    transform: translateY(-5px); /* Подъем при наведении */
+}
+
+.resume-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #2e7d32; /* Темный зеленый */
+}
+
+.resume-item p {
+    margin: 5px 0 0 0; /* Отступ для абзаца */
+}
+
 /* Стили для изображений */
 .imgs_cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Адаптивный грид */
+    gap: 20px; /* Расстояние между изображениями */
+    align-items: center;
+    justify-content:space-evenly;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0;
+    margin: 2%;
 }
 
 .imgs_cont img {
-    width: calc(50% - 10px); 
-    height: auto; 
-    max-height: 300px; /* Максимальная высота для изображений */
-    object-fit: cover; 
+    width: 25%; 
+    height: 30vh; 
     border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; 
 }
 
@@ -86,7 +140,7 @@ nav a:hover {
 
 /* Стили для кнопок */
 button {
-    background: #6a5acd; /* Синяя фиолетовая */
+    background: #4caf50; /* Темный зеленый */
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -96,18 +150,17 @@ button {
 }
 
 button:hover {
-    background: #ffcc00; /* Светло-желтый при наведении */
-    transform: translateY(-2px); /* Легкий подъем при наведении */
+    background: #388e3c; /* Более темный зеленый при наведении */
+    transform: scale(1.05); /* Увеличение при наведении */
 }
 
 /* Стили для футера */
 footer {
     text-align: center;
     padding: 20px;
-    background: #4b0082; /* Темно-фиолетовый */
+    background: #4caf50; /* Темный зеленый */
     color: #ffffff;
     margin-top: 20px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Стили для списков */
@@ -117,7 +170,7 @@ ul {
 }
 
 li {
-    background: rgba(255, 255, 255, 0.9); /* Чуть прозрачный белый */
+    background: #e8f5e9; /* Светло-зеленый фон для элементов списка */
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
@@ -125,7 +178,7 @@ li {
 }
 
 li:hover {
-    background: rgba(255, 255, 255, 1); /* Полностью белый при наведении */
+    background: #c8e6c9; /* Более светлый зеленый при наведении */
 }
 
 /* Стили для форм */
@@ -140,13 +193,12 @@ textarea {
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    border: 1px solid #6a5acd;
+    border: 1px solid #4caf50;
     transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #ffcc00; /* Светло-желтый при фокусе */
-    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5); /* Светло-желтый тень при фокусе */
+    border-color: #388e3c; /* Более темный зеленый при фокусе */
 }
