@@ -69,9 +69,9 @@ nav a:hover {
 
 .imgs_cont img {
     width: calc(50% - 10px); 
-    height: 400px; 
+    height: auto; 
+    max-height: 40vh; 
     object-fit: cover; 
-    margin-bottom: 20px; 
     border-radius: 10px; 
     transition: transform 0.3s ease; 
 }
@@ -79,6 +79,7 @@ nav a:hover {
 .imgs_cont img:hover {
     transform: scale(1.05); /* Увеличение при наведении */
 }
+
 
 
 /* Стили для кнопок */
